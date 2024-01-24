@@ -1,0 +1,88 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header {
+  background-color: white;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  display: flex;
+  align-items: baseline;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  width: 93%;
+
+  @include tablet {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+  color: $navy;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include tablet {
+    padding-left: 3rem;
+    padding: $desktop-padding;
+    margin-left: 1rem;
+  }
+
+  &__main {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $navy;
+    font-size: 1.5rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &__sop {
+    margin-top: 0;
+    text-decoration: none;
+    color: $navy;
+    font-size: 0.9rem;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+}
+
+.header-links {
+  display: flex;
+  width: 64%;
+  justify-content: space-evenly;
+  padding-top: 1.5rem;
+  color: $navy;
+  margin-right: 1rem;
+
+  @include tablet {
+    padding-right: 2rem;
+    margin-right: 0rem;
+    justify-content: space-between;
+
+
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $navy;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    font-size: 0.7rem;
+
+    @include tablet {
+      padding: 0;
+      font-size: 1rem;
+    }
+  }
+}

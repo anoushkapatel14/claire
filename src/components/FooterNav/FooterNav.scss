@@ -1,0 +1,29 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer {
+  display: none;
+  @include tablet {
+    display: block;
+    position: fixed;
+    z-index: 20;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.footer__div {
+  @include tablet {
+    display: flex;
+    justify-content: end;
+    padding-right: 4rem;
+  }
+}
+
+.footer__logo {
+  @include tablet {
+    display: block;
+    height: $logo-height;
+    padding: 0.5rem;
+  }
+}

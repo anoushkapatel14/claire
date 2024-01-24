@@ -1,0 +1,82 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.events-header {
+  background-color: $black;
+  display: flex;
+  align-items: baseline;
+  padding-right: 1rem;
+  padding-top: 1rem;
+
+  @include tablet {
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+
+    top: 0;
+  }
+}
+
+.events-header-titles {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include tablet {
+    padding-left: 3rem;
+    padding: $desktop-padding;
+    margin-left: 1rem;
+  }
+
+  &__main {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &__sop {
+    margin-top: 0;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+}
+
+.events-header-links {
+  display: flex;
+  width: 64%;
+  justify-content: space-evenly;
+  padding-top: 1.5rem;
+  margin-right: 1rem;
+
+  @include tablet {
+    padding-right: 2rem;
+    margin-right: 0rem;
+    justify-content: space-between;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.7rem;
+
+    @include tablet {
+      padding: 0;
+      font-size: 1rem;
+    }
+  }
+}
