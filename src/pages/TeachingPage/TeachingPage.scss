@@ -1,0 +1,76 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.teaching {
+  color: $navy;
+  // background-color: $black;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+
+  @include tablet {
+    display: flex;
+    padding: $desktop-padding;
+  }
+
+  &__title {
+    display: none;
+
+    @include tablet {
+      display: block;
+      font-size: 2rem;
+      color: $navy;
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    position: sticky;
+    height: 100vh;
+    margin-top: 7rem;
+  }
+
+  &__img {
+    height: 15rem;
+
+    @include tablet {
+      height: 94vh;
+      border-radius: 5px;
+    }
+  }
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 1rem 1rem 1rem;
+
+  @include tablet {
+    padding: 0rem 3rem 1rem 2rem;
+    margin-bottom: 2rem;
+    margin-top: 7rem;
+  }
+}
+
+.mobile-title {
+  font-size: 2rem;
+  color: $navy;
+  text-align: center;
+  margin-top: 7rem;
+
+  @include tablet {
+    display: none;
+    text-align: left;
+  }
+}

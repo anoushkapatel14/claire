@@ -1,0 +1,132 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.listen {
+  background-color: $white;
+  width: 97vw;
+  padding: 1rem;
+  padding-top: 2rem;
+
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 3rem;
+  }
+
+  &__title {
+    color: $navy;
+    margin-bottom: 0.5rem;
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+      margin-top: 7rem;
+    }
+
+    @include desktop {
+      margin-top: 7rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__video {
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin-top: 4rem;
+    }
+
+    @include desktop {
+      margin-top: 0;
+    }
+
+    &--top {
+      margin-top: 1rem;
+      @include tablet {
+        margin-top: 10rem;
+      }
+    }
+  }
+
+  &__description {
+    color: $navy;
+    margin-top: 5rem;
+    text-align: center;
+
+    @include tablet {
+      margin-left: 3rem;
+      margin-top: 11rem;
+    }
+  }
+}
+
+.video-and-description-tablet {
+  display: none;
+  @include tablet {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  @include desktop {
+    justify-content: center;
+  }
+}
+
+.text {
+  color: white;
+  font-size: 5rem;
+}
+
+.audio-img {
+  height: 15rem;
+
+  @include tablet {
+    height: 24rem;
+  }
+}
+
+.audio {
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  &__title {
+    color: $navy;
+    text-align: center;
+    padding-top: 1rem;
+
+    @include tablet {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+.audio-player {
+  height: 12rem;
+  margin-left: 1.5rem;
+  margin-bottom: 5rem;
+
+  @include tablet {
+    margin-bottom: 7rem;
+    margin-left: 7.5rem;
+    margin-bottom: 14rem;
+  }
+
+  @include desktop {
+    height: 0;
+  }
+}
+
+.video-and-description-mobile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+
+  @include tablet {
+    display: none;
+  }
+}

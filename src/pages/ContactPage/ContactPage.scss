@@ -1,0 +1,104 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.contact {
+  background-color: $white;
+  padding: 0 0.8rem 0 0.8rem;
+  
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+  }
+
+  @include desktop {
+    padding: 0 ;
+
+  }
+
+  &__tablet-img {
+    display: none;
+    padding: 0;
+
+    @include tablet {
+        display: block;
+      height: 61vh;
+      margin-top: 0;
+    }
+
+    @include desktop {
+        height: 100vh;
+        margin-top: 7rem;
+    }
+  }
+}
+
+.form {
+  color: $navy;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+
+  @include tablet {
+    margin-top: 9rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+    padding-bottom: 5rem;
+  }
+
+  @include desktop {
+    margin-left: 3rem;
+    margin-right: 2rem;
+    margin-top: 8rem;
+
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 7rem;
+
+    @include tablet {
+      margin-top: 0;    }
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__label {
+    padding-bottom: 0.5rem;
+  }
+
+  &__input {
+    margin-bottom: 0.5rem;
+    width: 40%;
+  }
+
+  &__message-input {
+    margin-bottom: 0.5rem;
+    width: 40%;
+    height: 5rem;
+  }
+
+  &__button {
+    background-color: $white;
+    color: $navy;
+  }
+
+  &__success-message {
+    color: $navy;
+    text-align: center;
+    margin-top: 0rem;
+  }
+}
+
+.mobile-img {
+  height: 17rem;
+
+  @include tablet {
+    display: none;
+  }
+}

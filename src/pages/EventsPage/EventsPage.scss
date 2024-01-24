@@ -1,0 +1,140 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.events {
+  display: flex;
+  margin-bottom: 3rem;
+
+  @include tablet {
+    margin-top: 4rem;
+  }
+
+  &__img {
+    height: 90vh;
+    position: sticky;
+    top: 20px;
+    margin-top: 7rem;
+  }
+
+  &__title {
+    margin-top: 7rem;
+    margin-bottom: 1rem;
+    color: $navy;
+    font-size: 2rem;
+    text-align: center;
+
+    @include tablet {
+      font-size: 2rem;
+      margin-bottom: 0;
+      padding-left: 1.4rem;
+      text-align: left;
+    }
+
+    @include desktop {
+      padding-left: 3rem;
+    }
+  }
+
+  &__table {
+    color: $navy;
+    font-size: 0.8rem;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+
+    @include desktop {
+      padding-left: 1rem;
+    }
+  }
+
+  &__previous-button {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    border: 0;
+    margin-bottom: 2rem;
+    color: $navy;
+  }
+}
+
+.table-title-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.table {
+  max-width: 100%;
+  color: $navy;
+
+  @include tablet {
+    padding: 1rem;
+  }
+
+  &__headings {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: solid black 1px;
+    color: $navy;
+    white-space: normal;
+
+    @include tablet {
+    }
+  }
+
+  &__details {
+    text-align: left;
+    border-bottom: solid black 1px;
+    color: $navy;
+    font-size: 0.7rem;
+    padding: 0.75rem 0.2rem 0.75rem 0.2rem;
+
+    @include tablet {
+      padding: 0.75rem 1rem 0.75rem 1rem;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+    }
+
+    &--last {
+      overflow-wrap: anywhere;
+      border-bottom: solid black 1px;
+      font-size: 0.7rem;
+
+      @include desktop {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $navy;
+  }
+}
+
+.events__previous-events-table {
+  &.visible {
+    display: block;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.main-img-div {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.btn-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
